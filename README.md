@@ -14,7 +14,7 @@ Then linear regression was performed on each relationship, in two sets of cities
 
 ![Image](WeatherPy/Images/CityLat_vs_Temp.png)
 
-There is a relationship between latitude and maximum temperature. When the latitude decreases (location closer to equator) the temperature increases, when the latitude increases( locations closer to earth poles) temperature decreases. There are some scattered values in the plot. With the results showen we should also consider that there might be other factors influencing the temperature (ocean currents, precipitation, altitude etc.)  
+There is a relationship between latitude and maximum temperature. When the latitude decreases(increases) to location closer to equator, the temperature increases(decreases), when the latitude increases (decreases) to locations closer to earth poles, temperature decreases (increases). There are some scattered values in the plot. With the results showen we should also consider that there might be other factors influencing the temperature (ocean currents, precipitation, altitude etc.)  
 
 - Humidity (%) vs. Latitude
 
@@ -33,11 +33,10 @@ Based on the plot Latitude vs  Cloudiness in 597 cities from the dataset we cann
 
 There is no relationship between wind speed and latitude based on the scatter plot. Most cities are located in an area where the wind speed reaches up to 10mph, with a few outliers where wind speed reaches over 35 mph.
 
-Linear regression
+### Linear regression
 - Northern Hemisphere - Temperature (F) vs. Latitude
 
 ![Image](WeatherPy/Images/North_Max_Temp_vs_Lat.png)
-
 - Southern Hemisphere - Temperature (F) vs. Latitude
 
 ![Image](WeatherPy/Images/South_Max_Temp_vs_Lat.png)
@@ -57,8 +56,7 @@ For Southern Hemisphere data set there is a weak positive linear relationship, w
 
 - Northern Hemisphere - Cloudiness (%) vs. Latitude
 
-![Image](WeatherPy/Images/
-North_Cloudiness_vs_Lat.png)
+![Image](WeatherPy/Images/North_Cloudiness_vs_Lat.png)
 
 - Southern Hemisphere - Cloudiness (%) vs. Latitude
 
@@ -67,6 +65,7 @@ North_Cloudiness_vs_Lat.png)
 Linear regression model for Northern Hemisphere  and Southern Hemisphere Cloudiness vs Latitude shows only a weak linear relationship. 
 Value of r  is 0.0229 for the Northern set of cities, with slope value equal to negative 0.29. By that we can say that approximately 2%  of the variation in cloudiness is explained by latitude. It is a negative weak linear correlation – when latitude (as an independent variable) increases, the cloudiness decreases.
 For the world cities in set for the Southern Hemisphere r-value is 0.00056. With this value close to zero, there is almost no linear correlation between the cloudiness and latitude. In the line equation the slope has a value + 0.06, which is a weak positive linear correlation in the data (when latitude increases, the cloudiness increases). 
+Based on the results and the cloudiness conditions with locations  closer to the equator we can expect more clouds.
 
 - Northern Hemisphere - Wind Speed (mph) vs. Latitude
 
@@ -89,11 +88,12 @@ With the weather data analyzed in this part we use it to plan someone's future v
 ![Image](VacationPy/Images/Heat%20map.jpg)
 
 The heatmap showcases humidity for each city in the dataset from the Part I. To find an ideal place to stay the weather conditions are narrowed down to places which have:
+
     * max temperature of more than 77 degrees and less than 86 degrees
     * cloudiness less than 10%
     * wind speed less than 10 mph
 
-Then using Google Places API the first hotel was found for each city located within 5000 meters of the city coordinates. On the top of the humidity heatmap for each hotel a pin was created with the following information: **Hotel Name**, **City**, and **Country**.  
+Then using Google Places API the first hotel was found for each city located within 5000 meters of the city coordinates. On the top of the humidity heatmap for each hotel a pin was created with the following information: *Hotel Name*, *City*, and *Country*.  
 
 - **Heat map with places with ideal weather conditions and nearby accomodations**
 
